@@ -1,0 +1,11 @@
+.container div {
+    width: 2vw;
+    height: 2vw;
+    outline-style: solid;
+}
+
+.flex {
+    display: flex;
+}
+
+
