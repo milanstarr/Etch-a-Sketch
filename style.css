@@ -8,4 +8,6 @@
     display: flex;
 }
 
-
+/* div:not(.container):hover {
+    background-color: gray;
+} */
