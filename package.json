@@ -1,0 +1,22 @@
+{
+  "name": "etch-a-sketch",
+  "version": "1.0.0",
+  "description": "Etch-a-sketch project using JS",
+  "main": "etch-a-sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milanstarr/Etch-a-Sketch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milanstarr/Etch-a-Sketch/issues"
+  },
+  "homepage": "https://github.com/milanstarr/Etch-a-Sketch#readme",
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}
