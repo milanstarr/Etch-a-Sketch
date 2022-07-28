@@ -37,13 +37,12 @@ function gridExpand() {
     "How many squares per side on the new grid? (max 100)"
   );
 
-  //   if gridNumInput > 100 {
-  //     alert("this number is too high. enter a number lower than 100");
-  //   } else {
-  //     createGridDiv(gridNumInput);
-  //   }
-
-  //   createGridDiv(gridNumInput);
+  if (gridNumInput > 100) {
+    alert("this number is too high! enter another number lower than 100.");
+    return;
+  } else {
+    createGrid(gridNumInput);
+  }
 }
 
 newGridBtn.addEventListener("click", gridExpand);
