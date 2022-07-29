@@ -2,11 +2,11 @@
 
 function createGridRoot() {
   const gridDiv = document.createElement("div");
-  gridDiv.classList.add('container', 'flex');
+  gridDiv.setAttribute("id", "grid-root");
+  gridDiv.classList.add("container", "flex");
   document.body.appendChild(gridDiv);
   return gridDiv;
 }
-
 
 function createGrid(gridNum) {
   const gridRoot = createGridRoot();
@@ -32,6 +32,13 @@ newGridBtn.textContent = "new grid";
 newGridBtn.style.marginLeft = "10px";
 btnDiv.appendChild(newGridBtn);
 
+function removeGridChildren() {
+  let element = document.getElementById("grid-root");
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
 function gridExpand() {
   let gridNumInput = prompt(
     "How many squares per side on the new grid? (max 100)"
@@ -40,9 +47,9 @@ function gridExpand() {
   if (gridNumInput > 100) {
     alert("this number is too high! enter another number lower than 100.");
     return;
-  } else {
-    createGrid(gridNumInput);
   }
+    removeGridChildren();
+    createGrid(gridNumInput);
 }
 
 newGridBtn.addEventListener("click", gridExpand);
