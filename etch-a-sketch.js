@@ -19,24 +19,25 @@ newGridBtn.textContent = "new grid";
 newGridBtn.style.marginLeft = "10px";
 btnDiv.appendChild(newGridBtn);
 
-// function removeGridChildren() {
-//   let element = document.getElementById("grid-root");
-//   while (element.firstChild) {
-//     element.removeChild(element.firstChild);
-//   }
-// }
 
-// function gridExpand() {
-//   let gridNumInput = prompt(
-//     "How many squares per side on the new grid? (max 100)"
-//   );
+function removeCells() {
+  let container = document.getElementById("container");
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+}
 
-//   if (gridNumInput > 100) {
-//     alert("this number is too high! enter another number lower than 100.");
-//     return;
-//   }
-//     removeGridChildren();
-//     createGrid(gridNumInput);
-// }
+function gridExpand() {
+  let gridNumInput = prompt(
+    "How many squares per side on the new grid? (max 100)"
+  );
 
-// newGridBtn.addEventListener("click", gridExpand);
+  if (gridNumInput > 100) {
+    alert("this number is too high! enter another number lower than 100.");
+    return;
+  }
+    removeCells();
+    createGrid(gridNumInput);
+}
+
+newGridBtn.addEventListener("click", gridExpand);
