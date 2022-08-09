@@ -13,11 +13,11 @@ function createGrid(gridNum) {
 
 createGrid(16);
 
-// const btnDiv = document.querySelector(".button");
-// const newGridBtn = document.createElement("button");
-// newGridBtn.textContent = "new grid";
-// newGridBtn.style.marginLeft = "10px";
-// btnDiv.appendChild(newGridBtn);
+const btnDiv = document.querySelector(".button");
+const newGridBtn = document.createElement("button");
+newGridBtn.textContent = "new grid";
+newGridBtn.style.marginLeft = "10px";
+btnDiv.appendChild(newGridBtn);
 
 // function removeGridChildren() {
 //   let element = document.getElementById("grid-root");

@@ -11,3 +11,12 @@ div {
     width: 5%;
     border-style: solid;
 }
+
+body {
+    display: flex;
+}
+
+.button {
+    border-style: none;
+    width: 100px;
+}
