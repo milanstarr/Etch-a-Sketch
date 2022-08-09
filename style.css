@@ -1,20 +1,13 @@
-.container div {
-    /* width: 30px;
-    height: 30px; */
-    aspect-ratio: 1 / 1;
-    outline-style: solid;
-}
-
-.container {
-    /* max-width: 60%; */
-}
-
-.flex {
+#container {
+    height: 600px;
+    width: 600px;
+    border-style: solid;
     display: flex;
+    flex-wrap: wrap;
+    border: 0;
 }
 
-.button {
-    width: 100px;
+div {
+    width: 5%;
+    border-style: solid;
 }
-
-
