@@ -1,14 +1,20 @@
 "use strict";
 
 function createGrid(gridNum) {
-  for (let i = 0; i < gridNum**2; i++) {
+  console.log(gridNum ** 2);
+  const container = document.querySelector("#container");
+  container.style['grid-template-columns'] = `repeat(${gridNum}, 1fr)`;
+
+  for (let i = 0; i < gridNum ** 2; i++) {
     let cells = document.createElement("div");
-      cells.addEventListener("mouseover", () => {
-        cells.style.backgroundColor = "black";
-      });
-      const container = document.querySelector("#container");
-      container.appendChild(cells);
-}
+
+    cells.addEventListener("mouseover", () => {
+      cells.style.backgroundColor = "black";
+    });
+
+    container.appendChild(cells);
+  }
+
 }
 
 createGrid(16);
@@ -18,7 +24,6 @@ const newGridBtn = document.createElement("button");
 newGridBtn.textContent = "new grid";
 newGridBtn.style.marginLeft = "10px";
 btnDiv.appendChild(newGridBtn);
-
 
 function removeCells() {
   let container = document.getElementById("container");
@@ -36,8 +41,8 @@ function gridExpand() {
     alert("this number is too high! enter another number lower than 100.");
     return;
   }
-    removeCells();
-    createGrid(gridNumInput);
+  removeCells();
+  createGrid(gridNumInput);
 }
 
 newGridBtn.addEventListener("click", gridExpand);
